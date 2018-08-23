@@ -35,6 +35,11 @@ export class LoopBackAuth {
     this.token.created = this.load('created');
     this.token.ttl = this.load('ttl');
     this.token.rememberMe = this.load('rememberMe');
+    this.token.askSystemUser = this.load('askSystemUser');
+    this.token.n0CompanyId = this.load('n0CompanyId');
+    this.token.n0LogoId = this.load('n0LogoId');
+    this.token.n0StoreId = this.load('n0StoreId');
+    this.token.n0Language = this.load('n0Language');
   }
   /**
    * @method setRememberMe
@@ -121,6 +126,11 @@ export class LoopBackAuth {
       this.persist('created', this.token.created, expires);
       this.persist('ttl', this.token.ttl, expires);
       this.persist('rememberMe', this.token.rememberMe, expires);
+      this.persist('askSystemUser', this.token.askSystemUser, expires);
+      this.persist('n0CompanyId', this.token.n0CompanyId, expires);
+      this.persist('n0LogoId', this.token.n0LogoId, expires);
+      this.persist('n0StoreId', this.token.n0StoreId, expires);
+      this.persist('n0Language', this.token.n0Language, expires);
       return true;
   };
   /**
